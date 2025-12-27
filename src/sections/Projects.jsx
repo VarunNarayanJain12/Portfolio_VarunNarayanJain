@@ -34,7 +34,7 @@ const Projects = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-accent font-mono text-lg mb-12 block drop-shadow-md font-medium"
+          className="text-accent font-mono text-base mb-12 block drop-shadow-md font-medium"
         >
           03. PROJECTS
         </motion.span>
@@ -50,18 +50,18 @@ const Projects = () => {
               className="group bg-black/50 backdrop-blur-lg p-10 rounded-xl hover:bg-black/70 transition-all border border-white/10 hover:border-accent/50 shadow-lg"
             >
               <div className="flex justify-between items-start mb-8">
-                <h3 className="text-3xl font-serif text-white drop-shadow-lg">{project.title}</h3>
+                <h3 className="text-2xl font-serif text-white drop-shadow-lg">{project.title}</h3>
                 <div className="flex gap-4">
-                  <a href={project.github} className="text-gray-200 hover:text-white transition-colors"><Github size={24} /></a>
-                  <a href={project.link} className="text-gray-200 hover:text-white transition-colors"><ExternalLink size={24} /></a>
+                  <a href={project.github} className="text-gray-200 hover:text-white transition-colors"><Github size={22} /></a>
+                  <a href={project.link} className="text-gray-200 hover:text-white transition-colors"><ExternalLink size={22} /></a>
                 </div>
               </div>
-              <p className="text-gray-100 mb-10 leading-relaxed text-lg font-light">
+              <p className="text-gray-100 mb-10 leading-relaxed text-base font-light">
                 {project.description}
               </p>
               <div className="flex flex-wrap gap-3">
                 {project.tags.map((tag, i) => (
-                  <span key={i} className="text-sm font-mono text-accent bg-accent/10 px-3 py-1.5 rounded border border-accent/20 font-medium">
+                  <span key={i} className="text-xs font-mono text-accent bg-accent/10 px-3 py-1.5 rounded border border-accent/20 font-medium">
                     {tag}
                   </span>
                 ))}

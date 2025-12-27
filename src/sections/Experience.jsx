@@ -60,7 +60,7 @@ const Experience = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-accent font-mono text-lg mb-16 block drop-shadow-md font-medium"
+          className="text-accent font-mono text-base mb-16 block drop-shadow-md font-medium"
         >
           04. EXPERIENCE & EDUCATION
         </motion.span>
@@ -68,7 +68,7 @@ const Experience = () => {
         <div className="space-y-20">
           {/* Experience */}
           <div>
-            <h3 className="text-3xl font-serif text-white mb-10 drop-shadow-lg">Experience</h3>
+            <h3 className="text-2xl font-serif text-white mb-10 drop-shadow-lg">Experience</h3>
             <div className="space-y-12">
               {experiences.map((exp, index) => (
                 <motion.div 
@@ -80,12 +80,12 @@ const Experience = () => {
                   className="border-l-4 border-accent pl-10 relative bg-black/30 backdrop-blur-md p-8 rounded-r-xl"
                 >
                   <span className="absolute -left-[11px] top-8 w-5 h-5 bg-black border-4 border-accent rounded-full" />
-                  <h4 className="text-2xl font-bold text-white mb-2">{exp.role}</h4>
-                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6 text-base font-mono text-gray-200">
+                  <h4 className="text-xl font-bold text-white mb-2">{exp.role}</h4>
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6 text-sm font-mono text-gray-200">
                     <span className="text-accent font-semibold">{exp.company}</span>
                     <span>{exp.period}</span>
                   </div>
-                  <p className="text-gray-100 leading-relaxed text-lg">
+                  <p className="text-gray-100 leading-relaxed text-base">
                     {exp.description}
                   </p>
                 </motion.div>
@@ -95,7 +95,7 @@ const Experience = () => {
 
           {/* Education */}
           <div>
-            <h3 className="text-3xl font-serif text-white mb-10 drop-shadow-lg">Education</h3>
+            <h3 className="text-2xl font-serif text-white mb-10 drop-shadow-lg">Education</h3>
             <div className="space-y-8">
               {education.map((edu, index) => (
                 <motion.div 
@@ -106,11 +106,11 @@ const Experience = () => {
                   className="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-white/20 transition-colors"
                 >
                   <div className="flex justify-between items-start mb-3">
-                    <h4 className="text-xl font-bold text-white">{edu.institution}</h4>
-                    <span className="text-base font-mono text-gray-300">{edu.period}</span>
+                    <h4 className="text-lg font-bold text-white">{edu.institution}</h4>
+                    <span className="text-sm font-mono text-gray-300">{edu.period}</span>
                   </div>
-                  <div className="text-accent font-mono text-lg mb-3 font-medium">{edu.degree}</div>
-                  {edu.details && <div className="text-gray-200 text-base">{edu.details}</div>}
+                  <div className="text-accent font-mono text-base mb-3 font-medium">{edu.degree}</div>
+                  {edu.details && <div className="text-gray-200 text-sm">{edu.details}</div>}
                 </motion.div>
               ))}
             </div>
@@ -118,7 +118,7 @@ const Experience = () => {
 
           {/* Achievements */}
           <div>
-            <h3 className="text-3xl font-serif text-white mb-10 drop-shadow-lg">Achievements</h3>
+            <h3 className="text-2xl font-serif text-white mb-10 drop-shadow-lg">Achievements</h3>
             <ul className="space-y-6">
               {achievements.map((item, index) => (
                 <motion.li 
@@ -126,9 +126,9 @@ const Experience = () => {
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  className="flex items-start gap-4 text-gray-100 text-lg"
+                  className="flex items-start gap-4 text-gray-100 text-base"
                 >
-                  <span className="text-accent mt-1.5 text-xl">▹</span>
+                  <span className="text-accent mt-1.5 text-lg">▹</span>
                   <span>{item}</span>
                 </motion.li>
               ))}
@@ -137,7 +137,7 @@ const Experience = () => {
 
           {/* Positions */}
           <div>
-            <h3 className="text-3xl font-serif text-white mb-10 drop-shadow-lg">Positions of Responsibility</h3>
+            <h3 className="text-2xl font-serif text-white mb-10 drop-shadow-lg">Positions of Responsibility</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {positions.map((pos, index) => (
                 <motion.div 
@@ -147,10 +147,10 @@ const Experience = () => {
                   viewport={{ once: true }}
                   className="bg-white/5 p-8 rounded-xl border border-white/10"
                 >
-                  <h4 className="text-xl font-bold text-white mb-2">{pos.role}</h4>
-                  <div className="text-accent text-base mb-3 font-medium">{pos.org}</div>
-                  <div className="text-sm font-mono text-gray-400 mb-5">{pos.period}</div>
-                  <p className="text-base text-gray-200 leading-relaxed">{pos.desc}</p>
+                  <h4 className="text-lg font-bold text-white mb-2">{pos.role}</h4>
+                  <div className="text-accent text-sm mb-3 font-medium">{pos.org}</div>
+                  <div className="text-xs font-mono text-gray-400 mb-5">{pos.period}</div>
+                  <p className="text-sm text-gray-200 leading-relaxed">{pos.desc}</p>
                 </motion.div>
               ))}
             </div>

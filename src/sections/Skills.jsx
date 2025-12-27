@@ -16,7 +16,7 @@ const Skills = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-accent font-mono text-lg mb-10 block drop-shadow-md font-medium"
+          className="text-accent font-mono text-base mb-10 block drop-shadow-md font-medium"
         >
           02. SKILLS
         </motion.span>
@@ -31,8 +31,8 @@ const Skills = () => {
               transition={{ delay: index * 0.1 }}
               className="border-t border-gray-600 pt-8 bg-black/30 backdrop-blur-md p-6 rounded-lg border border-white/10"
             >
-              <h3 className="text-2xl font-serif mb-8 text-white drop-shadow-lg">{group.category}</h3>
-              <ul className="space-y-4 font-mono text-lg text-gray-200">
+              <h3 className="text-xl font-serif mb-8 text-white drop-shadow-lg">{group.category}</h3>
+              <ul className="space-y-4 font-mono text-base text-gray-200">
                 {group.items.map((item, i) => (
                   <li key={i} className="hover:text-accent transition-colors cursor-default drop-shadow-sm">
                     {item}
